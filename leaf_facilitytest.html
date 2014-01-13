@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet Quick Start Guide Example</title>
+	<meta charset="utf-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="../dist/leaflet.ie.css" /><![endif]-->
+</head>
+<body>
+	<div id="map" style="width: 600px; height: 400px"></div>
+
+	<script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>	 
+	<script src="facility_geo.js"></script> 
+	<!--recalling geojson as javascript object-->
+
+	<script>
+
+		var map = L.map('map').setView([47.61, -122.36], 13);
+
+		L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
+		}).addTo(map);
+
+
+
+function onEachFeature(feature, layer) {
+    // does this feature have a property named popupContent?
+    if (feature.properties && feature.properties.LOWER_CASE) {
+       layer.bindPopup(feature.properties.LOWER_CASE);
+    }
+}
+
+var wtdfacility = {facility_geo};
+
+L.geoJson (wtdfacility).addTo(map);
+
+//L.geoJson(wtdfacility, {
+//    onEachFeature: onEachFeature
+//}).addTo(map);
+
+
+	</script>
+</body>
+</html>
