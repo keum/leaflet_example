@@ -27,16 +27,16 @@
 
 
 
-function onEachFeature(feature, layer) {
+		function onEachFeature(feature, layer) {
     // does this feature have a property named popupContent?
-    if (feature.properties && feature.properties.LOWER_CASE) {
-       layer.bindPopup(feature.properties.LOWER_CASE);
-    }
-}
+    		if (feature.properties && feature.properties.LOWER_CASE) {
+       		layer.bindPopup(feature.properties.LOWER_CASE);
+       	}
+	}
 
 var wtdfacility = {facility_geo};
 
-L.geoJson (wtdfacility).addTo(map);
+L.geoJson(wtdfacility).addTo(map);
 
 //L.geoJson(wtdfacility, {
 //    onEachFeature: onEachFeature

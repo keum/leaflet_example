@@ -163,3 +163,6 @@
 { "type": "Feature", "properties": { "FIRS_TAG": "RE*BELLEVUE.BELLEVUE", "FACILITY_T": "18", "X_COORDINA": -122.20415992, "Y_COORDINA": 47.60450327, "FIRS_TAG_1": "RE*BELLEVUE.BELLEVUE", "LOWER_CASE": "Bellevue PS", "Address": "595 102nd Ave SE", "City_State": "Bellevue, WA 98004" }, "geometry": { "type": "Point", "coordinates": [ -122.20415991762884, 47.604503272673711 ] } }
 ,
 { "type": "Feature", "properties": { "FIRS_TAG": "RE*TUKT.INTERURBAN", "FACILITY_T": "18", "X_COORDINA": -122.26193658, "Y_COORDINA": 47.4786226, "FIRS_TAG_1": "RE*TUKT.INTERURBAN", "LOWER_CASE": "Interurban PS", "Address": "13980 Interurban Ave S", "City_State": "Tukwila, WA 98168" }, "geometry": { "type": "Point", "coordinates": [ -122.26193657925717, 47.478622600057477 ] } }
+
+]
+}
